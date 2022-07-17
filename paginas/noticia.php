@@ -6,7 +6,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-
+    <meta property="og:url"           content="https://www.your-domain.com/your-page.html" />
+<meta property="og:type"          content="website" />
+<meta property="og:title"         content="Your Website Title" />
+<meta property="og:description"   content="Your description" />
+<meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
     <title>Titulo de la nota</title>
     
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
@@ -31,8 +35,10 @@
 <body>
     <div id="contenido" style="display:none">
     <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v14.0&appId=434430735194134&autoLogAppEvents=1" nonce="3tCh6Ytn"></script>   
-    <?php include('../componentes/noticia/navbar.php') ?>
+    <script async defer crossorigin="anonymous" 
+    src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v14.0&appId=434430735194134&autoLogAppEvents=1" nonce="9DLk2T7J"></script>
+
+   <?php include('../componentes/noticia/navbar.php') ?>
 
     <header style="margin-top: 5%;">
         <div class="container pt-4 pb-4">
@@ -61,11 +67,7 @@
 
     </div>
 
-    <div>
-
-    <?php include('../componentes/noticia/fb.php') ?>
-
-    </div>
+    <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
 
     <footer style="padding-bottom: 90px;">
         <div class="container pt-4 pb-4">
