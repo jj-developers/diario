@@ -33,11 +33,13 @@
 </head>
 
 <body>
-    <div id="contenido" style="display:none">
     <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" 
-    src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v14.0&appId=434430735194134&autoLogAppEvents=1" nonce="9DLk2T7J"></script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v14.0&appId=434430735194134&autoLogAppEvents=1" nonce="0DajHvyd"></script>
 
+
+
+    <div id="contenido" style="display:none">
+    
    <?php include('../componentes/noticia/navbar.php') ?>
 
     <header style="margin-top: 5%;">
@@ -66,8 +68,9 @@
     <?php include('../componentes/noticia/nota.php') ?>
 
     </div>
+    
+    <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small"><a id="afbb" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
 
-    <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
 
     <footer style="padding-bottom: 90px;">
         <div class="container pt-4 pb-4">
