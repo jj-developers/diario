@@ -11,7 +11,7 @@ echo '<meta property="og:url"           content="https://www.eldiariodeteziutlan
 <meta property="og:type"          content="website" />
 <meta property="og:title"         content="'.$row["titulo"].'" />
 <meta property="og:description"   content="'.$row["subtitulo"].'" />
-<meta property="og:image"         content="$row["primerafoto"]" />
+<meta property="og:image"         content="'$row["primerafoto"]'" />
     <title>'.$row["titulo"].'</title>
     ';
   }
