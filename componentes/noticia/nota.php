@@ -56,4 +56,6 @@ if($row["quintafoto"]){
         </div>';
 
   }
+  mysqli_next_result($con);
+
         ?>
