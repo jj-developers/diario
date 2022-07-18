@@ -1,4 +1,5 @@
 <?php
+$idn=$_GET["nota"];
 
 
 echo '<div class="fb-share-button" 
