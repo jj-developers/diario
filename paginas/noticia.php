@@ -68,9 +68,9 @@
     <?php include('../componentes/noticia/nota.php') ?>
 
     </div>
-    
+    <div class="text-center container">
     <?php include('../componentes/noticia/fb.php') ?>
-
+</div>
 
     <footer style="padding-bottom: 90px;">
         <div class="container pt-4 pb-4">
