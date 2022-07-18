@@ -12,6 +12,9 @@ echo '<meta property="og:url"           content="https://www.eldiariodeteziutlan
 <meta property="og:title"         content="'.$row["titulo"].'" />
 <meta property="og:description"   content="'.$row["subtitulo"].'" />
 <meta property="og:image"         content="'.$row["primerafoto"].'" />
+<meta property="fb:app_id" content="434430735194134" />
+
+
     <title>'.$row["titulo"].'</title>
     ';
   }
