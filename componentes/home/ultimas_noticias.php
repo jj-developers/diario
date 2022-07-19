@@ -12,6 +12,8 @@ echo '
 <div class="col-md-12 pt-3">
 <section>
                         <div class="container">
+                        <a style="    text-decoration:none;
+                        " href="paginas/noticia.php?nota='.$row["idnoticia"].'">
                             <div class="photo-card">
                                 <div style="width: 40%;">
                                 <img class="img-fluid photo-background" src="'. $row["url"].'"></div>
@@ -20,6 +22,7 @@ echo '
                                     <p class="text-black text-uppercase">'. $row["titulo"].'</p>
                                 </div>
                             </div>
+                            </a>
                         </div>
                     </section>
 </div>

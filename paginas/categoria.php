@@ -6,7 +6,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <?php include('../componentes/noticia/metanota.php') ?>
 
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap">
@@ -28,21 +27,11 @@
 </head>
 
 <body>
-<div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.0";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
 
-
-    <div id="contenido" style="display:none">
+<div id="contenido" style="display:none">
     
    <?php include('../componentes/navbar.php') ?>
-
-    <header style="margin-top: 5%;">
+   <header style="margin-top: 5%;">
         <div class="container pt-4 pb-4">
             <div class="row">
                 <div class="col-md-6"><img class="img-fluid" src="../assets/img/logo.png" /></div>
@@ -64,15 +53,30 @@
             </div>
         </div>
     </header>
+
     <div class="shadow-sm p-3">
-    <?php include('../componentes/noticia/nota.php') ?>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="text-center d-lg-flex justify-content-lg-center">
+                <?php include('../componentes/categorias/botonera.php') ?>
 
+            </div>
+        </div>
     </div>
-    <div class="text-center container">
-    <?php include('../componentes/noticia/fb.php') ?>
-</div>
+    <div class="container mt-5">
+        <div class="row">
+        <?php include('../componentes/categorias/listanotas.php') ?>
 
-    <footer style="padding-bottom: 90px;">
+
+
+            
+            
+        </div>
+    </div>
+    
+    </div>
+    <footer style="padding-bottom: 90px;padding-top: 190px;">
         <div class="container pt-4 pb-4">
             <div class="row">
                 <div class="col-md-6"><img class="img-fluid" src="../assets/img/logo.png" width="70%" /></div>
@@ -100,30 +104,12 @@
             </div>
         </div>
     </footer>
-    <div id="modal-1" class="modal fade" role="dialog" tabindex="-1">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <section class="login-clean">
-                        <form method="post">
-                            <h2 class="visually-hidden">Login Form</h2>
-                            <div class="illustration"><img class="img-fluid" src="logo.png" /></div>
-                            <div class="mb-3"><input class="form-control" type="email" name="email"
-                                    placeholder="Correo" /></div>
-                            <div class="mb-3"><input class="form-control" type="password" name="password"
-                                    placeholder="Contraseña" /></div>
-                            <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit">Iniciar
-                                    sesión</button></div>
-                        </form>
-                    </section>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    </div>
 
-    <?php include('../componentes/loader.php') ?>
+
+</div>
+<?php include('../componentes/loader.php') ?>
+
     <?php mysqli_close($con);?>
 
 

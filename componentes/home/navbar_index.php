@@ -5,13 +5,13 @@
                     <li class="nav-item"
                     ><a class="nav-link active px-3" data-bss-hover-animate="pulse" href="#"><i class="fas fa-home fs-5"></i>&nbsp;Inicio</a></li>
                     <li class="nav-item">
-                        <a class="nav-link px-3" data-bss-hover-animate="pulse" href="#"><i class="fas fa-book fs-4"></i>&nbsp;Regional</a></li>
+                        <a class="nav-link px-3" data-bss-hover-animate="pulse" href="./paginas/categoria.php?cat=1&&pagina=1"><i class="fas fa-book fs-4"></i>&nbsp;Regional</a></li>
                     <li class="nav-item">
-                        <a class="nav-link px-3" data-bss-hover-animate="pulse" href="#"><i class="fas fa-map-marked-alt fs-4"></i>&nbsp;Estatal</a></li>
+                        <a class="nav-link px-3" data-bss-hover-animate="pulse" href="./paginas/categoria.php?cat=2&&pagina=1"><i class="fas fa-map-marked-alt fs-4"></i>&nbsp;Estatal</a></li>
                     <li class="nav-item">
-                        <a class="nav-link px-3" data-bss-hover-animate="pulse" href="#"><i class="fas fa-bell fs-4"></i>&nbsp;Policiaca</a></li>
+                        <a class="nav-link px-3" data-bss-hover-animate="pulse" href="./paginas/categoria.php?cat=3&&pagina=1"><i class="fas fa-bell fs-4"></i>&nbsp;Policiaca</a></li>
                     <li class="nav-item">
-                        <a class="nav-link px-3" data-bss-hover-animate="pulse" href="#"><i class="fas fa-camera fs-4"></i>&nbsp;Entretenimiento</a></li>
+                        <a class="nav-link px-3" data-bss-hover-animate="pulse" href="./paginas/categoria.php?cat=4&&pagina=1"><i class="fas fa-camera fs-4"></i>&nbsp;Entretenimiento</a></li>
                     <li class="nav-item">
                         <a class="nav-link px3" data-bss-hover-animate="pulse" href="#"><i class="fas fa-comments fs-4"></i>&nbsp;Opinión</a></li>
                     <li class="nav-item">
