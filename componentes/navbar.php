@@ -15,7 +15,7 @@
                     <li class="nav-item">
                         <a class="nav-link px3" data-bss-hover-animate="pulse" href="#"><i class="fas fa-comments fs-4"></i>&nbsp;Opinión</a></li>
                     <li class="nav-item">
-                        <a class="nav-link px-3" data-bss-hover-animate="pulse" href="#"><i class="fas fa-book fs-4"></i>&nbsp;Hemeroteca</a></li>
+                        <a class="nav-link px-3" data-bss-hover-animate="pulse" href="hemeroteca.php"><i class="fas fa-book fs-4"></i>&nbsp;Hemeroteca</a></li>
                     <li class="nav-item">
                         <a class="nav-link px3" data-bss-hover-animate="pulse" href="#" data-bs-target="#modal-1" data-bs-toggle="modal"><i class="fas fa-external-link-alt fs-4"></i>&nbsp;Ingresar</a></li>
                 </ul>

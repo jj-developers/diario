@@ -7,9 +7,9 @@ $("#fecha").text(moment().locale('es').format('LL'));
 
 $( document ).ready(function() {
 
-    setInterval(() => {
+    setTimeout(() => {
         $("#contenido").show();
-        $("#loader").css("display","none");
+        $("#loader").remove();
     }, 1000);
 
 });

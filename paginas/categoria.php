@@ -27,6 +27,7 @@
 </head>
 
 <body>
+<?php include('../componentes/loader.php') ?>
 
 <div id="contenido" style="display:none">
     
@@ -63,7 +64,7 @@
 
             </div>
         </div>
-    </div>
+    
     <div class="container mt-5">
         <div class="row">
         <?php include('../componentes/categorias/listanotas.php') ?>
@@ -76,6 +77,10 @@
     </div>
     
     </div>
+
+
+
+    
     <footer style="padding-bottom: 90px;padding-top: 190px;">
         <div class="container pt-4 pb-4">
             <div class="row">
@@ -105,10 +110,15 @@
         </div>
     </footer>
 
+    <?php include('../componentes/home/banner.php') ?>
+    <?php include('../componentes/login.php') ?>
 
 
 </div>
-<?php include('../componentes/loader.php') ?>
+
+
+
+
 
     <?php mysqli_close($con);?>
 

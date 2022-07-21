@@ -8,6 +8,12 @@ $result = $con->query($sql);
   if($row = $result->fetch_assoc()) {
 
 echo '
+
+<nav class="navbar navbar-light navbar-expand-md fixed-bottom text-center">
+                <div class="container-fluid" style="height: 120px !important;
+    width: 800px !important;">
+                    <div class="container">
+
 <div class="carousel slide shadow" data-bs-ride="carousel" data-bss-hover-animate="pulse" id="carousel-5">
                         <div class="carousel-inner">
                             <div class="carousel-item active"><img class="w-100 d-block ban" src="'.$row["primerafoto"].'" alt="Slide Image"></div>
@@ -26,7 +32,13 @@ echo '
                             <li data-bs-target="#carousel-5" data-bs-slide-to="4"></li>
 
                         </ol>
-                    </div>';
+                    </div>
+                    
+                    </div>
+                </div>
+            </nav>
+                    
+                    ';
   }
   mysqli_next_result($con);
 
