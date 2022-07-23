@@ -1,8 +1,10 @@
 <?php
 session_start();
-if(!isset($_POST['correo']))
+
+if(isset($_SESSION['correo']))
 {
- 
+  include('../../control/conexion.php');
+
 }else{
     header('Location: ../../index.php');
 
@@ -34,11 +36,17 @@ if(!isset($_POST['correo']))
       rel="stylesheet"
       href="../../assetsadm/fonts/fontawesome5-overrides.min.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
+  
     <link rel="stylesheet" href="../../assetsadm/css/Login-Form-Clean.css" />
     <link rel="stylesheet" href="../../assetsadm/css/untitled.css" />
   </head>
 
   <body id="page-top">
+  <div id="contenido" style="display:none;">
+
     <div id="wrapper">
       <nav
         class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0"
@@ -196,14 +204,74 @@ if(!isset($_POST['correo']))
                 > Subir noticia</a
               >
             </div>
-          </div>
-          <div class="container d-lg-flex justify-content-lg-center">
-            <img class="img-fluid" src="../../assetsadm/img/2709382.jpg" width="80%" />
-          </div>
-          <h3 class="text-center" style="padding: 20px">
-            No tenemos noticias para mostrar, pero puedes subir algunas.
-          </h3>
+          </div> 
+
+          <div class="card-body">
+    <div class="row">
+        <div class="col-md-6 text-nowrap">
+            <div id="dataTable_length" class="dataTables_length" aria-controls="dataTable"><label class="form-label">Mostrar <select class="d-inline-block form-select form-select-sm">
+                        <option value="10" selected>10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select></label></div>
         </div>
+        <div class="col-md-6">
+            <div id="dataTable_filter" class="text-md-end dataTables_filter">
+              <label class="form-label">
+                <input id="buscador" class="form-control form-control-sm" type="search" aria-controls="dataTable" placeholder="Buscar" /></label></div>
+        </div>
+    </div>
+    <div id="dataTable" class="table-responsive table mt-2" role="grid" aria-describedby="dataTable_info">
+        <table id="dataTable" class="table my-0">
+            <thead>
+                <tr>
+                    <th>Titulo</th>
+                    <th>Subtitulo</th>
+                    <th>Descripción</th>
+                    <th>Activa</th>
+                    <th>Fecha</th>
+                    <th>Categoria</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php include('../componentes/noticias/listanoticias.php') ?>
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Titulo</td>
+                    <td>Subtitulo</td>
+                    <td>Descripción</td>
+                    <td>Activa</td>
+                    <td>Fecha</td>
+                    <td>Categoria</td>
+                    <td>Opciones</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="row">
+        <div class="col-md-6 align-self-center">
+            <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Mostrando 1 a 10 de 27</p>
+        </div>
+        <div class="col-md-6">
+            <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
+                <ul class="pagination">
+                    <li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+          <?php include('../componentes/noticias/noticias.php') ?>
+         
         <footer class="bg-white sticky-footer">
           <div class="container my-auto">
             <div class="text-center my-auto copyright">
@@ -216,75 +284,109 @@ if(!isset($_POST['correo']))
         ><i class="fas fa-angle-up"></i
       ></a>
     </div>
-    <div id="modal-1" class="modal fade" role="dialog" tabindex="-1">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title">Subir noticia</h4>
-            <button
-              class="btn-close"
-              type="button"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <section class="login-clean">
-              <form method="post">
-                <h2 class="visually-hidden">Login Form</h2>
-                <div class="mb-3">
-                  <input
-                    class="form-control"
-                    type="email"
-                    name="email"
-                    placeholder="Titulo"
-                  />
-                </div>
-                <div class="mb-3"></div>
-                <div class="mb-3">
-                  <input
-                    class="form-control"
-                    type="password"
-                    name="password"
-                    placeholder="Encabezado"
-                  />
-                </div>
-                <div class="mb-3">
-                  <textarea
-                    class="form-control"
-                    rows="6"
-                    cols="30"
-                    style="height: 100%"
-                    placeholder="Noticia"
-                  ></textarea>
-                </div>
-                <div class="mb-3">
-                  <select class="form-select">
-                    <optgroup label="This is a group">
-                      <option value="12" selected>Categoria</option>
-                      <option value="14">Policiaca</option>
-                      <option value>Local</option>
-                      <option value>Estatal</option>
-                      <option value>Entretenimiento</option>
-                    </optgroup>
-                  </select>
-                </div>
-                <div class="mb-3">
-                  <input class="form-control" type="file" />
-                </div>
-                <div class="mb-3">
-                  <button class="btn btn-primary d-block w-100" type="submit">
-                    Subir
-                  </button>
-                </div>
-              </form>
-            </section>
-          </div>
-        </div>
+    
+
+    <div class="modal fade" role="dialog" tabindex="-1" id="modal-1">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Subir noticia</h4>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <section class="login-clean">
+          <form id="noticia" method="post" action="../contol/borrarnoticia.php">
+            <h2 class="visually-hidden">Login Form</h2>
+            <div class="mb-3">
+              <input
+                class="form-control"
+                type="text"
+                name="titulo"
+                placeholder="Titulo"
+              />
+            </div>
+            <div class="mb-3"></div>
+            <div class="mb-3">
+              <input
+                class="form-control"
+                type="text"
+                name="subtitulo"
+                placeholder="Encabezado"
+              />
+            </div>
+            <div class="mb-3">
+              <textarea
+                class="form-control"
+                rows="6"
+                cols="30"
+                style="height: 100%"
+                name="descripcion"
+                placeholder="Noticia"
+              ></textarea>
+            </div>
+            <div class="mb-3">
+              <select
+                class="form-select"
+                name="idcategoria"
+              >
+                <optgroup label="Categorias">
+                  <option value="0" disabled selected>Categoria</option>
+                  <option value="Policiaca">Policiaca</option>
+                  <option value="Regional">Regional</option>
+                  <option value="Estatal">Estatal</option>
+                  <option value="Entretenimiento">Entretenimiento</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="mb-3">
+              <input
+                class="form-control"
+                type="file"
+                id="seleccionararchivo"
+                name="seleccionararchivo" value="" multiple
+                accept="image/*"
+                maxlength="5"
+              />
+              <div>
+                
+              </div>
+            </div>
+            <div class="mb-3">
+              <button data-bs-dismiss="modal"
+                class="btn btn-primary d-block w-100"
+                type="button"
+              >
+                Subir
+              </button>
+            </div>
+          </form>
+        </section>
       </div>
     </div>
+  </div>
+</div>
+
+
+</div>
+
+    <?php include('../componentes/loader.php') ?>
 
     <script src="../../assetsadm/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/bs-init.js"></script>    
+    <script src="../../assets/js/a.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
+    <script src="../../assets/js/Simple-Slider.js"></script>
+
     <script src="../../assetsadm/js/theme.js"></script>
+    <script src="../../assetsadm/js/adm.js"></script>
+
   </body>
 </html>
