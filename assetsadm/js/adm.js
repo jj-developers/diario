@@ -54,7 +54,8 @@ $( document ).ready(function() {
     });
 
 
-    $("#seleccionararchivo").on('change' , function(){
+    $("#subir").on('submit', function(e){
+        e.preventDefault();
 
         var archivo = document.getElementById('seleccionararchivo');
         
@@ -65,8 +66,10 @@ $( document ).ready(function() {
             formData.append('f[]', archivo.files[i]);
         }
         
-
-
+        formData.append('titulo', $("#titulo").val());
+        formData.append('subtitulo', $("#subtitulo").val());
+        formData.append('descripcion', $("#descripcion").val());
+        formData.append('idcategoria', $("#idcategoria").val());
         $.ajax({
             url: '../control/subir.php',
             type: 'post',
@@ -74,10 +77,13 @@ $( document ).ready(function() {
             contentType: false,
             processData: false,
             success: function(response) {
+                console.log(response)
                 if (response != 0) {
+                    location.reload();
+
                    // alert(response);
                 } else {
-                    alert('Formato de imagen incorrecto.');
+                    alert('Ocurrio un error revise su información.');
                 }
             }
         });

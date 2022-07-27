@@ -300,13 +300,15 @@ if(isset($_SESSION['correo']))
       </div>
       <div class="modal-body">
         <section class="login-clean">
-          <form id="noticia" method="post" action="../contol/borrarnoticia.php">
+          <form id="subir" method="post">
             <h2 class="visually-hidden">Login Form</h2>
             <div class="mb-3">
               <input
                 class="form-control"
                 type="text"
                 name="titulo"
+                id="titulo"
+
                 placeholder="Titulo"
               />
             </div>
@@ -316,6 +318,8 @@ if(isset($_SESSION['correo']))
                 class="form-control"
                 type="text"
                 name="subtitulo"
+                id="subtitulo"
+
                 placeholder="Encabezado"
               />
             </div>
@@ -326,6 +330,8 @@ if(isset($_SESSION['correo']))
                 cols="30"
                 style="height: 100%"
                 name="descripcion"
+                id="descripcion"
+
                 placeholder="Noticia"
               ></textarea>
             </div>
@@ -333,13 +339,16 @@ if(isset($_SESSION['correo']))
               <select
                 class="form-select"
                 name="idcategoria"
+                id="idcategoria"
+
               >
                 <optgroup label="Categorias">
                   <option value="0" disabled selected>Categoria</option>
-                  <option value="Policiaca">Policiaca</option>
-                  <option value="Regional">Regional</option>
-                  <option value="Estatal">Estatal</option>
-                  <option value="Entretenimiento">Entretenimiento</option>
+                  <option value="1">Regional</option>
+
+                  <option value="2">Policiaca</option>
+                  <option value="3">Estatal</option>
+                  <option value="4">Entretenimiento</option>
                 </optgroup>
               </select>
             </div>
@@ -359,7 +368,7 @@ if(isset($_SESSION['correo']))
             <div class="mb-3">
               <button data-bs-dismiss="modal"
                 class="btn btn-primary d-block w-100"
-                type="button"
+                type="submit"
               >
                 Subir
               </button>
