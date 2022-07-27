@@ -17,13 +17,8 @@ isset($_POST['quintafoto']))
  $titulo=$_POST['titulo'];
  $subtitulo=$_POST['subtitulo'];
  $descripcion=$_POST['descripcion'];
- $idusuario=$_POST['idusuario'];
  $idcategoria=$_POST['idcategoria'];
- $primerafoto=$_POST['primerafoto'];
- $segundafoto=$_POST['segundafoto'];
- $tercerafoto=$_POST['tercerafoto'];
- $cuartafoto=$_POST['cuartafoto'];
- $quintafoto=$_POST['quintafoto'];
+
 
 
  $sql = "INSERT INTO `noticias` 
