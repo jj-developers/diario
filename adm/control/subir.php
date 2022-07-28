@@ -16,15 +16,12 @@ isset($_POST['idcategoria']))
   $idcategoria=$_POST['idcategoria'];
 
 
-  $sql = "SELECT idnoticia FROM noticias 
-  WHERE idnoticia = (SELECT max(idnoticia) 
-  FROM noticias WHERE idnoticia > 2);";
+  $sql = "SELECT MAX(idnoticia) AS idnoticia FROM noticias;  ";
 
   $result = $con->query($sql);
 
         // output data of each row
     if($row = $result->fetch_assoc()) {
-
           if (isset($_FILES['f'])) {
 
               $cantidad = count((array)$_FILES["f"]["tmp_name"]);
@@ -33,6 +30,10 @@ isset($_POST['idcategoria']))
 
                   move_uploaded_file($_FILES["f"]["tmp_name"][$i],
                   "../imagenes/".$_FILES["f"]["name"][$i]);
+                  
+                  if($i==$cantidad-1){
+                    echo 1;
+                  }
 
               }
 
@@ -91,14 +92,13 @@ if(isset($_POST['quintafoto'])){
                             '. $titulo.',
                                 '1',
                                 ". $idcategoria.",
-                                '. $primerafoto.',
-                                '. $segundafoto.',
-                                '. $tercerafoto.',
-                                '. $cuartafoto.',
-                                '. $quintafoto.');
+                                '$primerafoto',
+                                ' $segundafoto',
+                                '$tercerafoto',
+                                ' $cuartafoto',
+                                '$quintafoto');
               ";
             $results = $con->query($sqls);
-            echo 1;
 
           }
         
