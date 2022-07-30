@@ -86,10 +86,10 @@ if(isset($_POST['quintafoto'])){
                           VALUES 
                           (NULL,
                           '1',
-                            '. $descripcion.',
+                            ' $descripcion',
                             '2022-07-22 16:33:35',
-                            '. $subtitulo.',
-                            '. $titulo.',
+                            '$subtitulo',
+                            '$titulo',
                                 '1',
                                 ". $idcategoria.",
                                 '$primerafoto',
