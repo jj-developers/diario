@@ -8,7 +8,7 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
     echo'
 <div id="ultima" nota="'. $row["idnoticia"].'" class="text-center hovereffect" style="background-color: #000000;">
-<img class="img-fluid img-responsive" src="'. $row["url"].'" 
+<img class="img-fluid img-responsive" src="adm/'. $row["url"].'" 
 style="height: 100%;filter: brightness(0.7);background-color: #000000;">
                         <div class="shadow overlay">
                             <h2 class="text-start">| '. $row["categoria"].'</h2>

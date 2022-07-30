@@ -37,22 +37,22 @@ isset($_POST['idcategoria']))
 
               }
 
-              $primerafoto= "../imagenes/".$_FILES["f"]["name"][0];
+              $primerafoto= "imagenes/".$_FILES["f"]["name"][0];
               if(isset($_POST['segundafoto'])){
-                              $segundafoto= "../imagenes/".$_FILES["f"]["name"][1];
+                              $segundafoto= "imagenes/".$_FILES["f"]["name"][1];
 
               }else{
                 $segundafoto="";
               }
               if(isset($_POST['tercerafoto'])){
-                $tercerafoto= "../imagenes/".$_FILES["f"]["name"][2];
+                $tercerafoto= "imagenes/".$_FILES["f"]["name"][2];
 
 }else{
   $tercerafoto="";
 
 }
 if(isset($_POST['cuartafoto'])){
-  $cuartafoto= "../imagenes/".$_FILES["f"]["name"][3];
+  $cuartafoto= "imagenes/".$_FILES["f"]["name"][3];
 
 }else{
   $cuartafoto="";
@@ -60,7 +60,7 @@ if(isset($_POST['cuartafoto'])){
 }
 
 if(isset($_POST['quintafoto'])){
-  $quintafoto= "../imagenes/".$_FILES["f"]["name"][4];
+  $quintafoto= "imagenes/".$_FILES["f"]["name"][4];
 
 }else{
   $quintafoto="";
