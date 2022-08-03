@@ -16,7 +16,7 @@ echo '
                         " href="paginas/noticia.php?nota='.$row["idnoticia"].'">
                             <div class="photo-card">
                                 <div style="width: 40%;">
-                                <img class="img-fluid photo-background" src="'. $row["url"].'"></div>
+                                <img class="img-fluid photo-background" src="adm/'. $row["url"].'"></div>
                                 <div class="photo-details">
                                     <h1 class="text-gray" style="color: #6c757d;">| '. $row["categoria"].'</h1>
                                     <p class="text-black text-uppercase">'. $row["titulo"].'</p>

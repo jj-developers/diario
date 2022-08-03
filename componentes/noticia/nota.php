@@ -18,7 +18,7 @@ echo '<div class="container">
             </div>
         </div>
         <div class="text-center" id="foto0">
-        <img style="min-height: 400px;max-height: 450px; width: 80%;" class="img-fluid p-4" src="'.$row["primerafoto"].'" />
+        <img style="min-height: 400px;max-height: 450px; width: 80%;" class="img-fluid p-4" src="../adm/'.$row["primerafoto"].'" />
         </div>
         <div class="container mt-5">
             <div class="row">
@@ -34,23 +34,23 @@ echo '<div class="container">
 if($row["segundafoto"]){
             echo '<div class="col-md-6 flex-box flex-justify-center flex-align-center"><a class="fancybox" rel="gallery1"
             title="El diario de teziutlan" href="#"><img style=" min-width: 100%; min-height: 290px;max-height: 290px;" class="img-fluid"
-            src="'.$row["segundafoto"].'" /></a></div>';
+            src="../adm/'.$row["segundafoto"].'" /></a></div>';
 }
 if($row["tercerafoto"]){
             echo '<div class="col-md-6 flex-box flex-justify-center flex-align-center"><a class="fancybox" rel="gallery1"
             title="El diario de teziutlan" href="#"><img style=" min-width: 100%; min-height: 290px;max-height: 290px;" class="img-fluid"
-            src="'.$row["tercerafoto"].'" /></a></div>';
+            src="../adm/'.$row["tercerafoto"].'" /></a></div>';
 }
 
 if($row["cuartafoto"]){
             echo '<div class="col-md-6 mt-2 flex-box flex-justify-center flex-align-center"><a class="fancybox" rel="gallery1"
             title="El diario de teziutlan" href="#"><img style=" min-width: 100%; min-height: 290px;max-height: 290px;" class="img-fluid"
-            src="'.$row["cuartafoto"].'" /></a></div>';
+            src="../adm/'.$row["cuartafoto"].'" /></a></div>';
 }
 if($row["quintafoto"]){
             echo ' <div class="col-md-6 mt-2 flex-box flex-justify-center flex-align-center"><a class="fancybox" rel="gallery1"
             title="El diario de teziutlan" href="#"><img style=" min-width: 100%; min-height: 290px;max-height: 290px;" class="img-fluid"
-            src="'.$row["quintafoto"].'" /></a></div>';
+            src="../adm/'.$row["quintafoto"].'" /></a></div>';
 }
             echo '</div>
         </div>';

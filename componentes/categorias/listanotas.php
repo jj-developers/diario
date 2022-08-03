@@ -23,7 +23,7 @@ echo '
                         " href="noticia.php?nota='.$row["idnoticia"].'">
                         <div class="photo-card">
                             <div class="photo-background" style="/*background-image: url();*/">
-                            <img class="img-fluid photo-background" src="'. $row["url"].'"/></div>
+                            <img class="img-fluid photo-background" src="../adm/'. $row["url"].'"/></div>
                             <div class="photo-details">
                                 <h1 style="color:#6c757d!important" class="text-gray">| '. $row["categoria"].'</h1>
                                 <p class="pt-1 text-black">'. $row["titulo"].'</p>
