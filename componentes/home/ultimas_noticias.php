@@ -18,8 +18,10 @@ echo '
                                 <div style="width: 40%;">
                                 <img class="img-fluid photo-background" src="adm/'. $row["url"].'"></div>
                                 <div class="photo-details">
-                                    <h1 class="text-gray" style="color: #6c757d;">| '. $row["categoria"].'</h1>
-                                    <p class="text-black text-uppercase">'. $row["titulo"].'</p>
+                                    <p class="text-gray" style="color: #6c757d;">| '. $row["categoria"].'</p>
+                                    <h1 class="text-black text-uppercase">'. $row["titulo"].'</h1>
+                                    <h6 class="text-black text-uppercase">'. $row["subtitulo"].'</h6>
+
                                 </div>
                             </div>
                             </a>
