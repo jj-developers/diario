@@ -18,7 +18,7 @@ if(isset($_SESSION['correo']))
                     <td>'.$row["fecha"].'</td>
                     <td>'.$row["categoria"].'</td>
                     <td>
-                    <button  class="btn btn-primary btn-sm" type="button" 
+                    <button nota="'.$row["idnoticia"].'" class="editar btn btn-primary btn-sm" type="button" 
                     style="margin-right: 2px;"><i class="fas fa-edit"></i>
                     </button><button id="borrar" nota="'.$row["idnoticia"].'" class="borrar btn btn-danger btn-sm" type="button">
                     <i class="fas fa-trash"></i></button></td>

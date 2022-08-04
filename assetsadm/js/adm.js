@@ -5,6 +5,12 @@ $( document ).ready(function() {
         $("#loader").remove();
     }, 1000);
 
+    $( ".editar" ).click(function() {
+        window.location.href = "editarNoticia.php?nota="+$(this).attr("nota");
+
+
+    });
+
     $( ".borrar" ).click(function() {
         var mensaje;
         var opcion = confirm("¿Desea borrar este registro?");
