@@ -1,11 +1,9 @@
 <?php
 include ("../../control/conexion.php");
 
-if(isset($_POST['titulo'])||
-isset($_POST['subtitulo'])||
-isset($_POST['descripcion'])||
-isset($_POST['primerafoto'])||
-
+if(isset($_POST['titulo'])&&
+isset($_POST['subtitulo'])&&
+isset($_POST['descripcion'])&&
 isset($_POST['idcategoria']))
 {
 
@@ -38,20 +36,20 @@ isset($_POST['idcategoria']))
               }
 
               $primerafoto= "imagenes/".$_FILES["f"]["name"][0];
-              if(isset($_POST['segundafoto'])){
+              if(isset($_FILES["f"]["name"][1])){
                               $segundafoto= "imagenes/".$_FILES["f"]["name"][1];
 
               }else{
                 $segundafoto="";
               }
-              if(isset($_POST['tercerafoto'])){
+              if(isset($_FILES["f"]["name"][2])){
                 $tercerafoto= "imagenes/".$_FILES["f"]["name"][2];
 
 }else{
   $tercerafoto="";
 
 }
-if(isset($_POST['cuartafoto'])){
+if(isset($_FILES["f"]["name"][3])){
   $cuartafoto= "imagenes/".$_FILES["f"]["name"][3];
 
 }else{
@@ -59,7 +57,7 @@ if(isset($_POST['cuartafoto'])){
 
 }
 
-if(isset($_POST['quintafoto'])){
+if(isset($_FILES["f"]["name"][4])){
   $quintafoto= "imagenes/".$_FILES["f"]["name"][4];
 
 }else{
@@ -93,9 +91,9 @@ if(isset($_POST['quintafoto'])){
                                 '1',
                                 ". $idcategoria.",
                                 '$primerafoto',
-                                ' $segundafoto',
+                                '$segundafoto',
                                 '$tercerafoto',
-                                ' $cuartafoto',
+                                '$cuartafoto',
                                 '$quintafoto');
               ";
             $results = $con->query($sqls);

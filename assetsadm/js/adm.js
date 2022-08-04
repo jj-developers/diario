@@ -7,7 +7,7 @@ $( document ).ready(function() {
 
     $( ".borrar" ).click(function() {
         var mensaje;
-        var opcion = confirm("Clicka en Aceptar o Cancelar");
+        var opcion = confirm("¿Desea borrar este registro?");
         if (opcion == true) {
                   $.ajax
       ({
