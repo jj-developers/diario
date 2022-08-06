@@ -67,16 +67,19 @@
                         
                 
                 </div>
-                <div class="col-md-2 pt-4"><img src="https://www.meteored.mx/wimages/foto4da932267bcc3b217bd9697ba8d82e3e.png"></div>
+                <div class="col-md-4 pt-4"><img src="https://www.meteored.mx/wimages/foto4da932267bcc3b217bd9697ba8d82e3e.png">
+                <h5 class="text-center text-secondary mt-5 mb-1">Edición impresa</h5>
+            
+
+            <?php include('componentes/hemeroteca/hemeroteca.php') ?>
+            
+            </div>
             </div>
         </div>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="text-center text-secondary mt-5 mb-3">Edición impresa</h1>
             
-
-                    <?php include('componentes/hemeroteca/hemeroteca.php') ?>
 
 
 

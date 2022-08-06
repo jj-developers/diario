@@ -65,7 +65,9 @@ if(isset($_FILES["f"]["name"][4])){
 
 }
 
+date_default_timezone_set('America/Mexico_City');      
 
+$date = date('Y-m-d H:i:s');
 
               $sqls = "INSERT INTO `noticias` 
               (`idnoticia`,
@@ -85,7 +87,7 @@ if(isset($_FILES["f"]["name"][4])){
                           (NULL,
                           '1',
                             ' $descripcion',
-                            '2022-07-22 16:33:35',
+                            '$date',
                             '$subtitulo',
                             '$titulo',
                                 '1',
