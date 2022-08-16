@@ -215,6 +215,112 @@ $result = $con->query($sql);
   if($row = $result->fetch_assoc()) {
   
 echo '
+
+<section class="photo-gallery">
+    <div class="container">
+        <div class="intro">
+            <h2 class="text-center">Lightbox Gallery</h2>
+        </div>
+        <div class="row photos" data-bss-baguettebox>';
+
+        echo    '<div class="col-sm-6 col-md-4 item">';
+        if($row["primerafoto"]){
+
+        echo '
+        <img style="  height: 180px;max-height: 180px;" class="img-fluid" src="../'.$row["primerafoto"].'" />';
+      }
+        echo '
+        <input
+        class="form-control"
+        type="file"
+        id="seleccionararchivo"
+        name="seleccionararchivo" value="" multiple
+        accept="image/*"
+        maxlength="5"
+      />
+        </div>';
+        
+       
+
+
+         echo   '<div class="col-sm-6 col-md-4 item">';
+         if($row["segundafoto"]){
+
+         echo '<img style="  height: 180px;max-height: 180px;" class="img-fluid" src="../'.$row["segundafoto"].'" />';
+         }
+         echo '<input
+         class="form-control"
+         type="file"
+         id="seleccionararchivo"
+         name="seleccionararchivo" value="" multiple
+         accept="image/*"
+         maxlength="5"
+       />
+         </div>';
+        
+
+        echo  '<div class="col-sm-6 col-md-4 item">';
+        if($row["tercerafoto"]){
+
+        echo ' <img style="  height: 180px;max-height: 180px;" class="img-fluid" src="../'.$row["tercerafoto"].'" />';
+        }
+
+        
+
+        echo '<input
+        class="form-control"
+        type="file"
+        id="seleccionararchivo"
+        name="seleccionararchivo" value="" multiple
+        accept="image/*"
+        maxlength="5"
+      />
+        </div>';
+        
+
+        echo '<div class="col-sm-6 col-md-4 item">';
+        if($row["cuartafoto"]){
+
+        echo '<img style="  height: 180px;max-height: 180px;" class="img-fluid" src="../'.$row["cuartafoto"].'" />';
+        }
+        echo '<img style="  height: 180px;max-height: 180px;" class="img-fluid" src="../../assets/img/logo_cuadrado.png" />';
+
+        echo '<input
+        class="form-control"
+        type="file"
+        id="seleccionararchivo"
+        name="seleccionararchivo" value="" multiple
+        accept="image/*"
+        maxlength="5"
+      />
+        </div>';
+        
+
+        echo '<div class="col-sm-6 col-md-4 item">';
+        if($row["quintafoto"]){
+
+        echo '<img style="  height: 180px;max-height: 180px;" class="img-fluid" src="../'.$row["quintafoto"].'" />';
+
+        }
+        echo '<img style="  height: 180px;max-height: 180px;" class="img-fluid" src="../../assets/img/logo_cuadrado.png" />';
+
+        echo '<input
+        class="form-control"
+        type="file"
+        id="seleccionararchivo"
+        name="seleccionararchivo" value="" multiple
+        accept="image/*"
+        maxlength="5"
+      />
+        </div>';
+        
+        echo '</div>
+    </div>
+    
+
+    
+</section>
+
     <section class="login-clean">
           <form id="subir" method="post">
             <h2 class="visually-hidden">Login Form</h2>
@@ -251,8 +357,10 @@ echo '
                
 
                 placeholder="Noticia"
-              >'.$row["idcategoria"].'</textarea>
+              >'.$row["descripcion"].'</textarea>
             </div>
+
+
             <div class="mb-3">
               <select
                 class="form-select"
@@ -271,19 +379,7 @@ echo '
                 </optgroup>
               </select>
             </div>
-            <div class="mb-3">
-              <input
-                class="form-control"
-                type="file"
-                id="seleccionararchivo"
-                name="seleccionararchivo" value="" multiple
-                accept="image/*"
-                maxlength="5"
-              />
-              <div>
-                
-              </div>
-            </div>
+          
             <div class="mb-3">
               <button data-bs-dismiss="modal"
                 class="btn btn-primary d-block w-100"
@@ -293,13 +389,20 @@ echo '
               </button>
             </div>
           </form>
-        </section>';
+        </section>
+        
+        
+        
+        ';
     }
 
 
 
     ?>
          
+         
+
+
        
       </div>
       <a class="border rounded d-inline scroll-to-top" href="#page-top"
