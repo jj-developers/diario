@@ -231,9 +231,10 @@ echo '
       }
         echo '
         <input
+        nota="'.$row["idnoticia"]. '"
         class="form-control"
         type="file"
-        id="seleccionararchivo"
+        id="primerafoto"
         name="seleccionararchivo" value="" multiple
         accept="image/*"
         maxlength="5"
@@ -428,6 +429,7 @@ echo '
 
     <script src="../../assetsadm/js/theme.js"></script>
     <script src="../../assetsadm/js/adm.js"></script>
+    <script src="../../assetsadm/js/editNota.js"></script>
 
   </body>
 </html>
