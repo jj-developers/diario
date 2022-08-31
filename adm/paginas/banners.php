@@ -196,21 +196,35 @@ if(isset($_SESSION['correo']))
             <h2 class="text-center">Banners</h2>
         </div>
         <div class="row articles">
-            <div class="col-md-12 item"><a href="#"><img class="img-fluid" src="desk.jpg" style="width: 520px;height: 220px;" /></a>
+
+        <?php
+$sql = "select * from sliders where idslider=5;";
+
+$result = $con->query($sql);
+
+  // output data of each row
+  if($row = $result->fetch_assoc()) {
+  
+echo '
+
+            <div class="col-md-12 item"><a href="#"><img class="img-fluid" src="'.$row["primerafoto"].'" style="width: 520px;height: 220px;" /></a>
                 <h3 class="name">Banner 1</h3><input class="form-control" type="file" accept="image/*" />
             </div>
-            <div class="col-md-12 item"><a href="#"><img class="img-fluid" src="desk.jpg" style="width: 520px;height: 220px;" /></a>
+            <div class="col-md-12 item mt-3"><a href="#"><img class="img-fluid" src="'.$row["segundafoto"].'" style="width: 520px;height: 220px;" /></a>
                 <h3 class="name">Banner 2</h3><input class="form-control" type="file" accept="image/*" />
             </div>
-            <div class="col-md-12 item"><a href="#"><img class="img-fluid" src="desk.jpg" style="width: 520px;height: 220px;" /></a>
+            <div class="col-md-12 item  mt-3"><a href="#"><img class="img-fluid" src="'.$row["tercerafoto"].'" style="width: 520px;height: 220px;" /></a>
                 <h3 class="name">Banner 3</h3><input class="form-control" type="file" accept="image/*" />
             </div>
-            <div class="col-md-12 item"><a href="#"><img class="img-fluid" src="desk.jpg" style="width: 520px;height: 220px;" /></a>
+            <div class="col-md-12 item  mt-3"><a href="#"><img class="img-fluid" src="'.$row["cuartafoto"].'" style="width: 520px;height: 220px;" /></a>
                 <h3 class="name">Banner 4</h3><input class="form-control" type="file" accept="image/*" />
             </div>
-            <div class="col-md-12 item"><a href="#"><img class="img-fluid" src="desk.jpg" style="width: 520px;height: 220px;" /></a>
+            <div class="col-md-12 item  mt-3"><a href="#"><img class="img-fluid" src="'.$row["quintafoto"].'" style="width: 520px;height: 220px;" /></a>
                 <h3 class="name">Banner 5</h3><input class="form-control" type="file" accept="image/*" />
-            </div>
+            </div>';
+
+  }
+  ?>
         </div>
     </div>
 </section>

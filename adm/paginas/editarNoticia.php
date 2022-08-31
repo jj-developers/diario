@@ -83,7 +83,7 @@ if(isset($_SESSION['correo']))
                 ><i class="fa fa-youtube-play"></i><span>Youtube</span></a
               ><a class="nav-link" href="table.html"
                 ><i class="fa fa-picture-o"></i><span>Slider</span></a
-              ><a class="nav-link" href="table.html"
+              ><a class="nav-link" href="banners.php"
                 ><i class="fas fa-bullhorn"></i><span>Banners</span></a
               >
             </li>
