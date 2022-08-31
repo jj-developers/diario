@@ -7,8 +7,10 @@ isset($_POST['id']))
 
 
   $pos=$_POST['pos'];
-  $id=$_POST['id'];
-  $primerafoto= "imagenes/".$_FILES["f"]["name"][0];
+  $id=$_POST['id'];  
+  $nombre=date("YmdHis");
+
+  $primerafoto= "imagenes/".$nombre."-0";
 
 
 
@@ -25,7 +27,7 @@ isset($_POST['id']))
            
 
                   move_uploaded_file($_FILES["f"]["tmp_name"][0],
-                  "../imagenes/".$_FILES["f"]["name"][0]);
+                  "../imagenes/".$nombre."-0");
 
 
               

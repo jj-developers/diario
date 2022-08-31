@@ -22,12 +22,13 @@ isset($_POST['idcategoria']))
     if($row = $result->fetch_assoc()) {
           if (isset($_FILES['f'])) {
 
-              $cantidad = count((array)$_FILES["f"]["tmp_name"]);
+              $cantidad = count((array)$_FILES["f"]["tmp_name"]);                  
+              $nombre=date("YmdHis");
+
               for ($i=0; $i<$cantidad; $i++)
               {
-
                   move_uploaded_file($_FILES["f"]["tmp_name"][$i],
-                  "../imagenes/".$_FILES["f"]["name"][$i]);
+                  "../imagenes/".$nombre."-".$i);
                   
                   if($i==$cantidad-1){
                     echo 1;
@@ -35,22 +36,22 @@ isset($_POST['idcategoria']))
 
               }
 
-              $primerafoto= "imagenes/".$_FILES["f"]["name"][0];
+              $primerafoto= "imagenes/".$nombre."-0";
               if(isset($_FILES["f"]["name"][1])){
-                              $segundafoto= "imagenes/".$_FILES["f"]["name"][1];
+                              $segundafoto= "imagenes/".$nombre."-1";
 
               }else{
                 $segundafoto="";
               }
               if(isset($_FILES["f"]["name"][2])){
-                $tercerafoto= "imagenes/".$_FILES["f"]["name"][2];
+                $tercerafoto= "imagenes/".$nombre."-2";
 
 }else{
   $tercerafoto="";
 
 }
 if(isset($_FILES["f"]["name"][3])){
-  $cuartafoto= "imagenes/".$_FILES["f"]["name"][3];
+  $cuartafoto= "imagenes/".$nombre."-3";
 
 }else{
   $cuartafoto="";
@@ -58,7 +59,7 @@ if(isset($_FILES["f"]["name"][3])){
 }
 
 if(isset($_FILES["f"]["name"][4])){
-  $quintafoto= "imagenes/".$_FILES["f"]["name"][4];
+  $quintafoto= "imagenes/".$nombre."-4";
 
 }else{
   $quintafoto="";
