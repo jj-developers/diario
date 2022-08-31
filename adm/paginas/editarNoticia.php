@@ -63,7 +63,7 @@ if(isset($_SESSION['correo']))
           <hr class="sidebar-divider my-0" />
           <ul id="accordionSidebar" class="navbar-nav text-light">
             <li class="nav-item">
-              <a class="nav-link" href="index.html"
+              <a class="nav-link" href="../../index.php"
                 ><i class="fas fa-home"></i><span>Inicio</span></a
               >
             </li>

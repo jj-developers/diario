@@ -63,12 +63,12 @@ if(isset($_SESSION['correo']))
           <hr class="sidebar-divider my-0" />
           <ul id="accordionSidebar" class="navbar-nav text-light">
             <li class="nav-item">
-              <a class="nav-link" href="index.html"
+              <a class="nav-link" href="../../index.php"
                 ><i class="fas fa-home"></i><span>Inicio</span></a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="blank.html"
+              <a class="nav-link " href="blank.html"
                 ><i class="far fa-newspaper"></i><span>Noticias</span></a
               >
             </li>
@@ -83,7 +83,7 @@ if(isset($_SESSION['correo']))
                 ><i class="fa fa-youtube-play"></i><span>Youtube</span></a
               ><a class="nav-link" href="table.html"
                 ><i class="fa fa-picture-o"></i><span>Slider</span></a
-              ><a class="nav-link" href="banners.php"
+              ><a class="nav-link active" href="table.html"
                 ><i class="fas fa-bullhorn"></i><span>Banners</span></a
               >
             </li>
@@ -190,196 +190,30 @@ if(isset($_SESSION['correo']))
             </div>
           </nav>
           <div class="container-fluid">
-            <div
-              class="d-sm-flex justify-content-between align-items-center mb-4"
-            >
-              <h3 class="text-dark mb-0">Mis noticias</h3>
-              <a
-                class="btn btn-primary btn-sm d-none d-sm-inline-block"
-                role="button"
-                href="#"
-                data-bs-target="#modal-1"
-                data-bs-toggle="modal"
-                ><i class="fas fa-cloud-upload-alt fa-sm text-white-50"></i
-                > Subir noticia</a
-              >
-            </div>
-          </div> 
-
-          <div class="card-body">
-    <div class="row">
-        <div class="col-md-6 text-nowrap">
-            <div id="dataTable_length" class="dataTables_length" aria-controls="dataTable"><label class="form-label">Mostrar <select class="d-inline-block form-select form-select-sm">
-                        <option value="10" selected>10</option>
-                        <option value="25">25</option>
-                        <option value="50">50</option>
-                        <option value="100">100</option>
-                    </select></label></div>
+          <section class="article-list">
+    <div class="container">
+        <div class="intro">
+            <h2 class="text-center">Banners</h2>
         </div>
-        <div class="col-md-6">
-            <div id="dataTable_filter" class="text-md-end dataTables_filter">
-              <label class="form-label">
-                <input id="buscador" class="form-control form-control-sm" type="search" aria-controls="dataTable" placeholder="Buscar" /></label></div>
+        <div class="row articles">
+            <div class="col-md-12 item"><a href="#"><img class="img-fluid" src="desk.jpg" style="width: 520px;height: 220px;" /></a>
+                <h3 class="name">Banner 1</h3><input class="form-control" type="file" accept="image/*" />
+            </div>
+            <div class="col-md-12 item"><a href="#"><img class="img-fluid" src="desk.jpg" style="width: 520px;height: 220px;" /></a>
+                <h3 class="name">Banner 2</h3><input class="form-control" type="file" accept="image/*" />
+            </div>
+            <div class="col-md-12 item"><a href="#"><img class="img-fluid" src="desk.jpg" style="width: 520px;height: 220px;" /></a>
+                <h3 class="name">Banner 3</h3><input class="form-control" type="file" accept="image/*" />
+            </div>
+            <div class="col-md-12 item"><a href="#"><img class="img-fluid" src="desk.jpg" style="width: 520px;height: 220px;" /></a>
+                <h3 class="name">Banner 4</h3><input class="form-control" type="file" accept="image/*" />
+            </div>
+            <div class="col-md-12 item"><a href="#"><img class="img-fluid" src="desk.jpg" style="width: 520px;height: 220px;" /></a>
+                <h3 class="name">Banner 5</h3><input class="form-control" type="file" accept="image/*" />
+            </div>
         </div>
     </div>
-    <div id="dataTable" class="table-responsive table mt-2" role="grid" aria-describedby="dataTable_info">
-        <table id="dataTable" class="table my-0">
-            <thead>
-                <tr>
-                    <th>Titulo</th>
-                    <th>Subtitulo</th>
-                    <th>Descripción</th>
-                    <th>Activa</th>
-                    <th>Fecha</th>
-                    <th>Categoria</th>
-                    <th>Opciones</th>
-                </tr>
-            </thead>
-            <tbody>
-            <?php include('../componentes/noticias/listanoticias.php') ?>
-
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td>Titulo</td>
-                    <td>Subtitulo</td>
-                    <td>Descripción</td>
-                    <td>Activa</td>
-                    <td>Fecha</td>
-                    <td>Categoria</td>
-                    <td>Opciones</td>
-                </tr>
-            </tfoot>
-        </table>
-    </div>
-    <div class="row">
-        <div class="col-md-6 align-self-center">
-            <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Mostrando 1 a 10 de 27</p>
-        </div>
-        <div class="col-md-6">
-            <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
-                <ul class="pagination">
-                    <li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
-                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-</div>
-
-          <?php include('../componentes/noticias/noticias.php') ?>
-         
-        <footer class="bg-white sticky-footer">
-          <div class="container my-auto">
-            <div class="text-center my-auto copyright">
-              <span>Copyright © El Diario de Teziutlan 2022</span>
-            </div>
-          </div>
-        </footer>
-      </div>
-      <a class="border rounded d-inline scroll-to-top" href="#page-top"
-        ><i class="fas fa-angle-up"></i
-      ></a>
-    </div>
-    
-
-    <div class="modal fade" role="dialog" tabindex="-1" id="modal-1">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Subir noticia</h4>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="modal-body">
-        <section class="login-clean">
-          <form id="subir" method="post">
-            <h2 class="visually-hidden">Login Form</h2>
-            <div class="mb-3">
-              <input
-                class="form-control"
-                type="text"
-                name="titulo"
-                id="titulo"
-
-                placeholder="Titulo"
-              />
-            </div>
-            <div class="mb-3"></div>
-            <div class="mb-3">
-              <input
-                class="form-control"
-                type="text"
-                name="subtitulo"
-                id="subtitulo"
-
-                placeholder="Encabezado"
-              />
-            </div>
-            <div class="mb-3">
-              <textarea
-                class="form-control"
-                rows="6"
-                cols="30"
-                style="height: 100%"
-                name="descripcion"
-                id="descripcion"
-
-                placeholder="Noticia"
-              ></textarea>
-            </div>
-            <div class="mb-3">
-              <select
-                class="form-select"
-                name="idcategoria"
-                id="idcategoria"
-
-              >
-                <optgroup label="Categorias">
-                  <option value="0" disabled selected>Categoria</option>
-                  <option value="1">Regional</option>
-
-                  <option value="2">Policiaca</option>
-                  <option value="3">Estatal</option>
-                  <option value="4">Entretenimiento</option>
-                </optgroup>
-              </select>
-            </div>
-            <div class="mb-3">
-              <input
-                class="form-control"
-                type="file"
-                id="seleccionararchivo"
-                name="seleccionararchivo" value="" multiple
-                accept="image/*"
-                maxlength="5"
-              />
-              <div>
-                
-              </div>
-            </div>
-            <div class="mb-3">
-              <button data-bs-dismiss="modal"
-                class="btn btn-primary d-block w-100"
-                type="submit"
-              >
-                Subir
-              </button>
-            </div>
-          </form>
-        </section>
-      </div>
-    </div>
-  </div>
-</div>
-
+</section>
 
 </div>
 
@@ -396,6 +230,7 @@ if(isset($_SESSION['correo']))
 
     <script src="../../assetsadm/js/theme.js"></script>
     <script src="../../assetsadm/js/adm.js"></script>
+    <script src="../../assetsadm/js/editNota.js"></script>
 
   </body>
 </html>
