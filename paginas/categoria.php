@@ -110,7 +110,7 @@
         </div>
     </footer>
 
-    <?php include('../componentes/home/banner.php') ?>
+    <?php include('../componentes/home/bannerpage.php') ?>
     <?php include('../componentes/login.php') ?>
 
 
