@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 
-<body>
+<body ondragstart="return false" onselectstart="return false" oncontextmenu="return false">
 <div id="fb-root"></div>
   <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];

@@ -207,20 +207,20 @@ $result = $con->query($sql);
   
 echo '
 
-            <div class="col-md-12 item"><a href="#"><img class="img-fluid" src="'.$row["primerafoto"].'" style="width: 520px;height: 220px;" /></a>
-                <h3 class="name">Banner 1</h3><input class="form-control" type="file" accept="image/*" />
+            <div class="col-md-12 item"><a href="#"><img class="img-fluid" src="../'.$row["primerafoto"].'" style="width: 520px;height: 220px;" /></a>
+                <h3 class="name">Banner 1</h3><input id="banner1" class="form-control" type="file" accept="image/*" />
             </div>
-            <div class="col-md-12 item mt-3"><a href="#"><img class="img-fluid" src="'.$row["segundafoto"].'" style="width: 520px;height: 220px;" /></a>
-                <h3 class="name">Banner 2</h3><input class="form-control" type="file" accept="image/*" />
+            <div class="col-md-12 item mt-3"><a href="#"><img class="img-fluid" src="../'.$row["segundafoto"].'" style="width: 520px;height: 220px;" /></a>
+                <h3 class="name">Banner 2</h3><input id="banner2" class="form-control" type="file" accept="image/*" />
             </div>
-            <div class="col-md-12 item  mt-3"><a href="#"><img class="img-fluid" src="'.$row["tercerafoto"].'" style="width: 520px;height: 220px;" /></a>
-                <h3 class="name">Banner 3</h3><input class="form-control" type="file" accept="image/*" />
+            <div class="col-md-12 item  mt-3"><a href="#"><img class="img-fluid" src="../'.$row["tercerafoto"].'" style="width: 520px;height: 220px;" /></a>
+                <h3 class="name">Banner 3</h3><input id="banner3" class="form-control" type="file" accept="image/*" />
             </div>
-            <div class="col-md-12 item  mt-3"><a href="#"><img class="img-fluid" src="'.$row["cuartafoto"].'" style="width: 520px;height: 220px;" /></a>
-                <h3 class="name">Banner 4</h3><input class="form-control" type="file" accept="image/*" />
+            <div class="col-md-12 item  mt-3"><a href="#"><img class="img-fluid" src="../'.$row["cuartafoto"].'" style="width: 520px;height: 220px;" /></a>
+                <h3 class="name">Banner 4</h3><input id="banner4" class="form-control" type="file" accept="image/*" />
             </div>
-            <div class="col-md-12 item  mt-3"><a href="#"><img class="img-fluid" src="'.$row["quintafoto"].'" style="width: 520px;height: 220px;" /></a>
-                <h3 class="name">Banner 5</h3><input class="form-control" type="file" accept="image/*" />
+            <div class="col-md-12 item  mt-3"><a href="#"><img  class="img-fluid" src="../'.$row["quintafoto"].'" style="width: 520px;height: 220px;" /></a>
+                <h3 class="name">Banner 5</h3><input id="banner5" class="form-control" type="file" accept="image/*" />
             </div>';
 
   }
@@ -244,7 +244,7 @@ echo '
 
     <script src="../../assetsadm/js/theme.js"></script>
     <script src="../../assetsadm/js/adm.js"></script>
-    <script src="../../assetsadm/js/editNota.js"></script>
+    <script src="../../assetsadm/js/editBaner.js"></script>
 
   </body>
 </html>

@@ -250,9 +250,10 @@ echo '
          echo '<img style="  height: 180px;max-height: 180px;" class="img-fluid" src="../'.$row["segundafoto"].'" />';
          }
          echo '<input
-         class="form-control"
-         type="file"
-         id="seleccionararchivo"
+         nota="'.$row["idnoticia"]. '"
+        class="form-control"
+        type="file"
+        id="segundafoto"
          name="seleccionararchivo" value="" multiple
          accept="image/*"
          maxlength="5"
@@ -269,9 +270,10 @@ echo '
         
 
         echo '<input
+        nota="'.$row["idnoticia"]. '"
         class="form-control"
         type="file"
-        id="seleccionararchivo"
+        id="tercerafoto"
         name="seleccionararchivo" value="" multiple
         accept="image/*"
         maxlength="5"
@@ -287,9 +289,10 @@ echo '
         echo '<img style="  height: 180px;max-height: 180px;" class="img-fluid" src="../../assets/img/logo_cuadrado.png" />';
 
         echo '<input
+        nota="'.$row["idnoticia"]. '"
         class="form-control"
         type="file"
-        id="seleccionararchivo"
+        id="cuartafoto"
         name="seleccionararchivo" value="" multiple
         accept="image/*"
         maxlength="5"
@@ -306,9 +309,10 @@ echo '
         echo '<img style="  height: 180px;max-height: 180px;" class="img-fluid" src="../../assets/img/logo_cuadrado.png" />';
 
         echo '<input
+        nota="'.$row["idnoticia"]. '"
         class="form-control"
         type="file"
-        id="seleccionararchivo"
+        id="quintafoto"
         name="seleccionararchivo" value="" multiple
         accept="image/*"
         maxlength="5"
