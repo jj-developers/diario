@@ -153,7 +153,7 @@ if(isset($_SESSION['correo']))
         </div>
         <div class="row articles">
     <div class="col-md-12 item"><a href="#"></a><input class="form-control" id="date" type="date" />
-        <h3 class="name mt-3">Banner 1</h3><input class="form-control" type="file" accept="image/*" />
+        <h3 class="name mt-3">Seleccione el pdf</h3><input class="form-control" type="file" accept="application/pdf" />
 
         <embed style="border-color: #05457b;
     border-width: 8px;
