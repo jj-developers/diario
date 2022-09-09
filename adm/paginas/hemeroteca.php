@@ -48,8 +48,8 @@ if(isset($_SESSION['correo']))
   <div id="contenido" style="display:none;">
 
     <div id="wrapper">
-      <?php
-      $menu="banners";
+    <?php
+    $menu="hemeroteca";
 
     include('../componentes/menu/menulateral.php') ?>
     
@@ -149,39 +149,21 @@ if(isset($_SESSION['correo']))
           <section class="article-list">
     <div class="container">
         <div class="intro">
-            <h2 class="text-center">Banners</h2>
+            <h2 class="text-center">Hemeroteca</h2>
         </div>
         <div class="row articles">
+    <div class="col-md-12 item"><a href="#"></a><input class="form-control" id="date" type="date" />
+        <h3 class="name mt-3">Banner 1</h3><input class="form-control" type="file" accept="image/*" />
 
-        <?php
-$sql = "select * from sliders where idslider=5;";
-
-$result = $con->query($sql);
-
-  // output data of each row
-  if($row = $result->fetch_assoc()) {
-  
-echo '
-
-            <div class="col-md-12 item"><a href="#"><img class="img-fluid" src="../'.$row["primerafoto"].'" style="width: 520px;height: 220px;" /></a>
-                <h3 class="name">Banner 1</h3><input id="banner1" class="form-control" type="file" accept="image/*" />
-            </div>
-            <div class="col-md-12 item mt-3"><a href="#"><img class="img-fluid" src="../'.$row["segundafoto"].'" style="width: 520px;height: 220px;" /></a>
-                <h3 class="name">Banner 2</h3><input id="banner2" class="form-control" type="file" accept="image/*" />
-            </div>
-            <div class="col-md-12 item  mt-3"><a href="#"><img class="img-fluid" src="../'.$row["tercerafoto"].'" style="width: 520px;height: 220px;" /></a>
-                <h3 class="name">Banner 3</h3><input id="banner3" class="form-control" type="file" accept="image/*" />
-            </div>
-            <div class="col-md-12 item  mt-3"><a href="#"><img class="img-fluid" src="../'.$row["cuartafoto"].'" style="width: 520px;height: 220px;" /></a>
-                <h3 class="name">Banner 4</h3><input id="banner4" class="form-control" type="file" accept="image/*" />
-            </div>
-            <div class="col-md-12 item  mt-3"><a href="#"><img  class="img-fluid" src="../'.$row["quintafoto"].'" style="width: 520px;height: 220px;" /></a>
-                <h3 class="name">Banner 5</h3><input id="banner5" class="form-control" type="file" accept="image/*" />
-            </div>';
-
-  }
-  ?>
-        </div>
+        <embed style="border-color: #05457b;
+    border-width: 8px;
+    border-style: double;border-radius: 15px;"
+    
+                        src="https://firebasestorage.googleapis.com/v0/b/eldiariodeteziutlanmx.appspot.com/o/pagina%2Fdiarios%2FEl%20Diario%2006-05-2022%20(1)%20(1)%20(1)_compressed%20(1).pdf?alt=media&token=384601e3-5a2c-4a45-b99e-ec4672892014"
+                        width="100%" height="1000" type="application/pdf">
+                </div>
+    </div>
+</div>
     </div>
 </section>
 
@@ -200,7 +182,7 @@ echo '
 
     <script src="../../assetsadm/js/theme.js"></script>
     <script src="../../assetsadm/js/adm.js"></script>
-    <script src="../../assetsadm/js/editBaner.js"></script>
+    <script src="../../assetsadm/js/hemeroteca.js"></script>
 
   </body>
 </html>

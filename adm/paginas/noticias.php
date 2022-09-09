@@ -1,5 +1,6 @@
 <?php
 session_start();
+$menu="noticias";
 
 if(isset($_SESSION['correo']))
 {
@@ -48,55 +49,9 @@ if(isset($_SESSION['correo']))
   <div id="contenido" style="display:none;">
 
     <div id="wrapper">
-      <nav
-        class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0"
-      >
-        <div class="container-fluid d-flex flex-column p-0">
-          <a
-            class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0 bg-white"
-            href="#"
-          >
-            <div class="sidebar-brand-icon">
-              <img class="img-fluid" src="../../assetsadm/img/logo.png" />
-            </div>
-          </a>
-          <hr class="sidebar-divider my-0" />
-          <ul id="accordionSidebar" class="navbar-nav text-light">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html"
-                ><i class="fas fa-home"></i><span>Inicio</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="blank.html"
-                ><i class="far fa-newspaper"></i><span>Noticias</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="table.html"
-                ><i class="far fa-comments"></i><span>Opiniones</span></a
-              ><a class="nav-link" href="table.html"
-                ><i class="fas fa-book-open"></i><span>Hemeroteca</span></a
-              ><a class="nav-link" href="table.html"
-                ><i class="fas fa-users"></i><span>Usuarios</span></a
-              ><a class="nav-link" href="table.html"
-                ><i class="fa fa-youtube-play"></i><span>Youtube</span></a
-              ><a class="nav-link" href="table.html"
-                ><i class="fa fa-picture-o"></i><span>Slider</span></a
-              ><a class="nav-link" href="banners.php"
-                ><i class="fas fa-bullhorn"></i><span>Banners</span></a
-              >
-            </li>
-          </ul>
-          <div class="text-center d-none d-md-inline">
-            <button
-              id="sidebarToggle"
-              class="btn rounded-circle border-0"
-              type="button"
-            ></button>
-          </div>
-        </div>
-      </nav>
+    <?php
+    include('../componentes/menu/menulateral.php') ?>
+    
       <div
         id="content-wrapper"
         class="d-flex flex-column"
