@@ -153,14 +153,27 @@ if(isset($_SESSION['correo']))
         </div>
         <div class="row articles">
     <div class="col-md-12 item"><a href="#"></a><input class="form-control" id="date" type="date" />
-        <h3 class="name mt-3">Seleccione el pdf</h3><input class="form-control" type="file" accept="application/pdf" />
+        <h3 class="name mt-3">Seleccione el pdf</h3><input id="pdf" class="form-control" type="file" accept="application/pdf" />
 
-        <embed style="border-color: #05457b;
+        <?php
+date_default_timezone_set("America/Mexico_City");
+
+$fec=date('Y-m-d');
+$sql = "SELECT url FROM hemeroteca WHERE idhemeroteca='$fec'";
+$result = $con->query($sql);
+
+  // output data of each row
+  if($row = $result->fetch_assoc()) {
+
+
+       echo' <embed id="contpdf" style="border-color: #05457b;
     border-width: 8px;
     border-style: double;border-radius: 15px;"
     
-                        src="https://firebasestorage.googleapis.com/v0/b/eldiariodeteziutlanmx.appspot.com/o/pagina%2Fdiarios%2FEl%20Diario%2006-05-2022%20(1)%20(1)%20(1)_compressed%20(1).pdf?alt=media&token=384601e3-5a2c-4a45-b99e-ec4672892014"
-                        width="100%" height="1000" type="application/pdf">
+                        src="../'.$row["url"].'"
+                        width="100%" height="1000" type="application/pdf">';
+  }
+                        ?>
                 </div>
     </div>
 </div>
