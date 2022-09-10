@@ -17,7 +17,7 @@ $result = $con->query($sql);
     border-width: 8px;
     border-style: double;border-radius: 15px;"
     
-                        src="./adm/'.$row["url"].'"
+                        src="../adm/'.$row["url"].'"
                         width="100%" height="800" type="application/pdf">
                 </div>
                 ';

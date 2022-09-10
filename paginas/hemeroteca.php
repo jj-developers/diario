@@ -55,7 +55,7 @@
     </header>
     <h1 class="text-center text-secondary mt-2 mb-3">Edición impresa</h1>
     <div class="p-3">
-    <?php include('../componentes/hemeroteca/hemeroteca.php') ?>
+    <?php include('../componentes/hemeroteca/hemerotecaout.php') ?>
     
     <footer style="padding-bottom: 90px;padding-top: 190px;">
         <div class="container pt-4 pb-4">
