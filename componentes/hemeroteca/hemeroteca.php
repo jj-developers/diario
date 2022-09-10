@@ -12,7 +12,7 @@ echo '
     border-width: 8px;
     border-style: double;border-radius: 15px;"
     
-                        src="'.$row["url"].'"
+                        src="./adm/'.$row["url"].'"
                         width="100%" height="250" type="application/pdf">
                 </div>
                 ';
