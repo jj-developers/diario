@@ -143,6 +143,7 @@
     <script src="assets/js/Simple-Slider.js"></script>
     <script src="assets/js/z.js"></script>
     <script src="assets/js/index.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/viewer.js"></script>
 
 </body>
 

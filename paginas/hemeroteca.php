@@ -105,6 +105,7 @@
     <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
     <script src="../assets/js/Simple-Slider.js"></script>
     <script src="../assets/js/z.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/viewer.js"></script>
 
 </body>
 

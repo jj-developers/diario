@@ -13,13 +13,18 @@ $result = $con->query($sql);
     echo '
 
 
-                    <embed style="border-color: #05457b;
-    border-width: 8px;
-    border-style: double;border-radius: 15px;"
-    
-                        src="../adm/'.$row["url"].'"
-                        width="100%" height="800" type="application/pdf">
-                </div>
+    <div id="adobe-dc-view" style="height: 1000px; width: 100%;"></div>
+
+
+    <script type="text/javascript">
+    document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
+      var adobeDCView = new AdobeDC.View({clientId: "8b774ee0abe7442497b543371ccddb34", divId: "adobe-dc-view"});
+      adobeDCView.previewFile({
+        content:{location: {url: "../adm/'.$row["url"].'"}},
+        metaData:{fileName: "Bodea Brochure.pdf"}
+      }, {embedMode: "SIZED_CONTAINER"});
+    });
+  </script>
                 ';
   }
 
