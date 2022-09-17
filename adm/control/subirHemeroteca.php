@@ -10,10 +10,10 @@ if(isset($_POST['fecha']))
 
   $foto= "hemeroteca/".$fecha;
 
+  echo 'entro';
 
 
   $sql = "INSERT INTO `hemeroteca` (`idhemeroteca`, `url`) VALUES ('$fecha', '$foto') ON DUPLICATE KEY UPDATE url='$foto'";
-  sprintf($sql, $id);
 
   $result = $con->query($sql);
 
@@ -37,5 +37,7 @@ if(isset($_POST['fecha']))
     echo 0;
 }
 
+}else{
+  echo '..';
 }
 ?>
