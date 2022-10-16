@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+$id=$_GET["id"];
+
 if(isset($_SESSION['correo']))
 {
   include('../../control/conexion.php');
@@ -151,10 +153,10 @@ if(isset($_SESSION['correo']))
         <div class="intro">
             <h2 class="text-center">Banners</h2>
         </div>
-        <div class="row articles">
+        <div id="idban" ban="<?php echo $id ?>" class="row articles">
 
         <?php
-$sql = "select * from sliders where idslider=5;";
+$sql = "select * from sliders where idslider='$id';";
 
 $result = $con->query($sql);
 

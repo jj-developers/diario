@@ -68,22 +68,40 @@ echo '<nav
               >';
             }
             if($menu=="sliders"){
-              echo '<a class="nav-link active" href="table.html"
-                ><i class="fa fa-picture-o"></i><span>Sliders</span></a
-              >';
+              echo '<a class="nav-link active" href="banners.php?id=1"
+              ><i class="fas fa-bullhorn"></i><span>Slider principal</span></a
+            >';
+            echo '<a class="nav-link active" href="banners.php?id=2"
+            ><i class="fas fa-bullhorn"></i><span>Slider 1</span></a
+          >';
+          echo '<a class="nav-link active" href="banners.php?id=3"
+          ><i class="fas fa-bullhorn"></i><span>Slider 2</span></a
+        >';
+        echo '<a class="nav-link active" href="banners.php?id=4"
+        ><i class="fas fa-bullhorn"></i><span>Slider 3</span></a
+      >';
             }else{
-                echo '<a class="nav-link " href="table.html"
-                ><i class="fa fa-picture-o"></i><span>Slider</span></a
-              >';
+              echo '<a class="nav-link active" href="banners.php?id=1"
+              ><i class="fas fa-bullhorn"></i><span>Slider principal</span></a
+            >';
+            echo '<a class="nav-link active" href="banners.php?id=2"
+            ><i class="fas fa-bullhorn"></i><span>Slider 1</span></a
+          >';
+          echo '<a class="nav-link active" href="banners.php?id=3"
+          ><i class="fas fa-bullhorn"></i><span>Slider 2</span></a
+        >';
+        echo '<a class="nav-link active" href="banners.php?id=4"
+        ><i class="fas fa-bullhorn"></i><span>Slider 3</span></a
+      >';
             }
 
             if($menu=="banners"){
 
-              echo '<a class="nav-link active" href="banners.php"
+              echo '<a class="nav-link active" href="banners.php?id=5"
                 ><i class="fas fa-bullhorn"></i><span>Banners</span></a
               >';
             }else{
-                echo '<a class="nav-link " href="banners.php"
+                echo '<a class="nav-link " href="banners.php?id=5"
                 ><i class="fas fa-bullhorn"></i><span>Banners</span></a
               >';
             }

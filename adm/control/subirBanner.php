@@ -6,14 +6,15 @@ if(isset($_POST['pos']))
 
 
   $pos=$_POST['pos'];
-  
+  $id=$_POST['id'];
+
   $nombre=date("YmdHis");
 
-  $foto= "banners/".$nombre."-0";
+  $foto= "banners/".$nombre."-".$id;
 
+echo $id;
 
-
-  $sql = "UPDATE sliders SET ".$pos." ='$foto' WHERE idslider =5";
+  $sql = "UPDATE sliders SET ".$pos." ='$foto' WHERE idslider ='$id'";
   sprintf($sql, $id);
 
   $result = $con->query($sql);
@@ -26,7 +27,7 @@ if(isset($_POST['pos']))
            
 
                   move_uploaded_file($_FILES["f"]["tmp_name"][0],
-                  "../banners/".$nombre."-0");
+                  "../banners/".$nombre."-".$id);
 
 
               

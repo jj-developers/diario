@@ -20,12 +20,9 @@ if(isset($_POST['fecha']))
         // output data of each row
     
           if (isset($_FILES['f'])) {
-
-              $cantidad = count((array)$_FILES["f"]["tmp_name"]);
            
 
-                  move_uploaded_file($_FILES["f"]["tmp_name"][0],
-                  "../hemeroteca/".$fecha);
+                  move_uploaded_file($_FILES["f"]["tmp_name"][0],"../hemeroteca/".$fecha);
 
 
               

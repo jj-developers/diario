@@ -1,4 +1,7 @@
 $( document ).ready(function() {
+
+console.log($("#idban").attr("ban"));
+
     $("#banner1").on('change', function(e){
         e.preventDefault();
 
@@ -9,6 +12,7 @@ $( document ).ready(function() {
         
         for (let i = 0; i < archivo.files.length; i++) {
             formData.append('f[]', archivo.files[i]);
+            formData.append('id',$("#idban").attr("ban"));
         }
         formData.append('pos', 'primerafoto');
         
@@ -43,6 +47,8 @@ $( document ).ready(function() {
         
         for (let i = 0; i < archivo.files.length; i++) {
             formData.append('f[]', archivo.files[i]);
+            formData.append('id',$("#idban").attr("ban"));
+
         }
         formData.append('pos', 'segundafoto');
         
@@ -76,6 +82,8 @@ $( document ).ready(function() {
         
         for (let i = 0; i < archivo.files.length; i++) {
             formData.append('f[]', archivo.files[i]);
+            formData.append('id',$("#idban").attr("ban"));
+
         }
         formData.append('pos', 'tercerafoto');
         
@@ -109,6 +117,8 @@ $( document ).ready(function() {
         
         for (let i = 0; i < archivo.files.length; i++) {
             formData.append('f[]', archivo.files[i]);
+            formData.append('id',$("#idban").attr("ban"));
+
         }
         formData.append('pos', 'cuartafoto');
         
@@ -142,6 +152,8 @@ $( document ).ready(function() {
         
         for (let i = 0; i < archivo.files.length; i++) {
             formData.append('f[]', archivo.files[i]);
+            formData.append('id',$("#idban").attr("ban"));
+
         }
         formData.append('pos', 'quintafoto');
         
