@@ -10,7 +10,6 @@ window.onload = function(){
     document.getElementById('date').value=ano+"-"+mes+"-"+dia;
 
 
-
         $("#pdf").on('change', function(e){
             e.preventDefault();
     
@@ -22,7 +21,7 @@ window.onload = function(){
             for (let i = 0; i < archivo.files.length; i++) {
                 formData.append('f[]', archivo.files[i]);
             }
-            formData.append('fecha', ano+"-"+mes+"-"+dia);
+            formData.append('fecha', ano+""+mes+""+dia);
             
             $.ajax({
                 url: '../control/subirHemeroteca.php',

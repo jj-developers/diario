@@ -10,8 +10,6 @@ if(isset($_POST['fecha']))
 
   $foto= "hemeroteca/".$fecha;
 
-  echo 'entro';
-
 
   $sql = "INSERT INTO `hemeroteca` (`idhemeroteca`, `url`) VALUES ('$fecha', '$foto') ON DUPLICATE KEY UPDATE url='$foto'";
 

@@ -1,5 +1,7 @@
 <?php
+//$con=mysqli_connect("localhost","eldiar11_silvia","gjSdEF#&K{uq","eldiar11_noticias");
 $con=mysqli_connect("localhost","root","","diario");
+
 // Check connection
 
 if (!$con) {
