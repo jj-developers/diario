@@ -27,7 +27,12 @@ echo '
                                 <div class="photo-details">
                                     <p class="text-gray" style="color: #6c757d;">| '. $row["categoria"].'</p>
                                     <h1 class="text-black text-uppercase">'. $row["titulo"].'</h1>
-                                    <h6 class="text-black text-uppercase">'. $row["subtitulo"].'</h6>
+                                    <h6 style=" overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 2; /* number of lines to show */
+                                            line-clamp: 2; 
+                                    -webkit-box-orient: vertical;" class="text-black text-uppercase">'. $row["subtitulo"].'</h6>
 
                                 </div>
                             </div>
