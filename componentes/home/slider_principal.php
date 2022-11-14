@@ -7,31 +7,31 @@ $result = $con->query($sql);
   // output data of each row
   if($row = $result->fetch_assoc()) {
 
-if(!$row['primerafoto']){
+if(!file_exists("./adm/".$row['primerafoto'])){
     $foto1="./assets/img/marca.png";
 }else{
     $foto1="./adm/".$row['primerafoto'];
 }
 
-if(!$row['segundafoto']){
+if(!file_exists("./adm/".$row['segundafoto'])){
     $foto2="./assets/img/marca.png";
 }else{
     $foto2="./adm/".$row['segundafoto'];
 }
 
-if($row['tercerafoto']){
+if(!file_exists("./adm/".$row['tercerafoto'])){
     $foto3="./assets/img/marca.png";
 }else{
     $foto3="./adm/".$row['tercerafoto'];
 }
 
-if($row['cuartafoto']){
+if(!file_exists("./adm/".$row['cuartafoto'])){
     $foto4="./assets/img/marca.png";
 }else{
     $foto4="./adm/".$row['cuartafoto'];
 }
 
-if($row['quintafoto']){
+if(!file_exists("./adm/".$row['quintafoto'])){
     $foto5="./assets/img/marca.png";
 }else{
     $foto5="./adm/".$row['quintafoto'];
