@@ -11,6 +11,8 @@ $result = $con->query($sql);
 
 
     echo '
+    <h5 class="text-center text-secondary mt-5 mb-1">Edición impresa</h5>
+
     <div id="adobe-dc-view" style="height: 300px; width: 100%;"></div>
 
 

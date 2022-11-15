@@ -72,7 +72,6 @@
                 
                 </div>
                 <div class="col-md-4 pt-4"><img src="https://www.meteored.mx/wimages/foto4da932267bcc3b217bd9697ba8d82e3e.png">
-                <h5 class="text-center text-secondary mt-5 mb-1">Edición impresa</h5>
             
 
             <?php include('componentes/hemeroteca/hemeroteca.php') ?>
