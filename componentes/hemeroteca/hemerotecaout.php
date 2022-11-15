@@ -1,7 +1,7 @@
 <?php
     date_default_timezone_set("America/Mexico_City");
 
-    $fec=date('Y-m-d');
+    $fec=date('Ymd');
 $sql = "SELECT url FROM hemeroteca WHERE idhemeroteca='$fec'";
 
 $result = $con->query($sql);
