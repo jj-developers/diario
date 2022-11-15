@@ -174,7 +174,7 @@ $result = $con->query($sql);
          var adobeDCView = new AdobeDC.View({clientId: "8b774ee0abe7442497b543371ccddb34", divId: "adobe-dc-view"});
          adobeDCView.previewFile({
            content:{location: {url: "../'.$row["url"].'"}},
-           metaData:{fileName: "Bodea Brochure.pdf"}
+           metaData:{fileName: "Diario.pdf"}
          }, {embedMode: "SIZED_CONTAINER"});
        });
      </script>';
